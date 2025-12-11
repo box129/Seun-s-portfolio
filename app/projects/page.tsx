@@ -36,9 +36,9 @@ export default function ProjectsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-neutral-900">
+    <div className="min-h-screen bg-contrast-900">
       {/* Page Header */}
-      <section className="section-mobile bg-gradient-to-b from-neutral-800 to-neutral-900 grid-pattern">
+      <section className="section-mobile bg-contrast-850 border-b border-contrast-800/50 grid-pattern">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -50,10 +50,10 @@ export default function ProjectsPage() {
               My <span className="text-gradient">Projects</span>
             </h1>
             {/* TODO: USER INPUT - Customize your projects page subtitle */}
-            <p className="text-lg md:text-xl text-neutral-400 mb-4">
+            <p className="text-lg md:text-xl text-contrast-100 mb-4">
               A collection of projects I've built to solve real problems and explore new technologies
             </p>
-            <div className="inline-block px-4 py-2 bg-neutral-800 rounded-lg">
+            <div className="inline-block px-4 py-2 bg-contrast-900 rounded-lg border border-primary-500/20 shadow-[0_0_10px_rgba(0,178,255,0.1)]">
               <span className="text-primary-400 font-semibold">
                 {filteredProjects.length} {filteredProjects.length === 1 ? 'Project' : 'Projects'}
               </span>
@@ -63,7 +63,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Filter Bar */}
-      <section className="sticky top-20 z-40 bg-neutral-900/95 backdrop-blur-lg border-b border-neutral-800 py-4">
+      <section className="sticky top-20 z-40 bg-contrast-900/95 backdrop-blur-md border-b border-contrast-800/50 py-4">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: -10 }}
@@ -108,14 +108,14 @@ export default function ProjectsPage() {
                 transition={{ duration: 0.4 }}
                 className="text-center py-20"
               >
-                <div className="max-w-md mx-auto glass p-12 rounded-2xl">
-                  <div className="w-20 h-20 bg-neutral-800 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Github className="w-10 h-10 text-neutral-600" />
+                <div className="max-w-md mx-auto card p-12 text-center">
+                  <div className="w-20 h-20 bg-contrast-900 rounded-full flex items-center justify-center mx-auto mb-6 border border-contrast-800">
+                    <Github className="w-10 h-10 text-contrast-100/50" />
                   </div>
                   <h3 className="text-2xl font-heading font-bold text-white mb-3">
                     No Projects Found
                   </h3>
-                  <p className="text-neutral-400 mb-6">
+                  <p className="text-contrast-100/70 mb-6">
                     No projects found using <span className="text-primary-400 font-semibold">{selectedTech}</span>.
                     Try selecting a different technology.
                   </p>
@@ -133,7 +133,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="section-mobile bg-neutral-800">
+      <section className="section-mobile bg-contrast-850 border-t border-contrast-800/50">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -145,7 +145,7 @@ export default function ProjectsPage() {
             <h2 className="text-3xl md:text-4xl font-heading font-black text-white mb-4">
               Want to see more?
             </h2>
-            <p className="text-lg text-neutral-400 mb-8">
+            <p className="text-lg text-contrast-100 mb-8">
               Check out my GitHub for more projects and contributions
             </p>
             <a

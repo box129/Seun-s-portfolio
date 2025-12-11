@@ -15,6 +15,7 @@ interface ScrollExpandMediaProps {
   maxHeight?: number;
   minWidth?: number;
   maxWidth?: number;
+  autoScrollAnimation?: boolean;
 }
 
 export function ScrollExpandMedia({
@@ -28,6 +29,7 @@ export function ScrollExpandMedia({
   maxHeight = 600,
   minWidth = 300,
   maxWidth = 1200,
+  autoScrollAnimation = false,
 }: ScrollExpandMediaProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -47,6 +49,15 @@ export function ScrollExpandMedia({
   const midpoint = Math.floor(titleWords.length / 2);
   const firstHalf = titleWords.slice(0, midpoint).join(' ');
   const secondHalf = titleWords.slice(midpoint).join(' ');
+
+  // Auto-scroll bounce animation
+  // Floating animation for the media container
+  const floatY = useTransform(scrollYProgress, [0, 0.05], [0, 0]); // Placeholder to keep hooks consistent if needed, but we'll use animate prop.
+
+  // We removed the auto-scroll effect to replace it with a subtle continuous float.
+  useEffect(() => {
+    // No-op for autoScrollAnimation
+  }, [autoScrollAnimation]);
 
   return (
     <div
@@ -69,7 +80,16 @@ export function ScrollExpandMedia({
             height: mediaHeight,
             width: mediaWidth,
           }}
-          className="relative rounded-2xl overflow-hidden shadow-2xl mx-auto"
+          // Continuous floating animation (vertical bobbing)
+          animate={{
+            y: [0, -15, 0],
+          }}
+          transition={{
+            duration: 4, // Smooth 4s cycle
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="relative rounded-2xl overflow-hidden shadow-2xl mx-auto hero-float-element"
         >
           {mediaType === 'image' ? (
             <Image
@@ -152,6 +172,7 @@ export function HeroScrollExpansion({
       maxHeight={700}
       minWidth={300}
       maxWidth={1400}
+      autoScrollAnimation={true}
     />
   );
 }

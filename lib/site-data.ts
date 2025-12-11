@@ -9,15 +9,15 @@
 // ==================
 // TODO: USER INPUT - Add your basic personal information
 export const personalInfo = {
-  name: "Your Full Name", // TODO: Replace with your name (e.g., "Jane Developer")
-  title: "Your Job Title", // TODO: e.g., "Full Stack Developer", "Frontend Engineer"
-  bio: "Your elevator pitch here. This should be 3-4 sentences about who you are, what you do, and what drives you as a developer.", // TODO: Write your short bio
-  location: "Your City, Country", // TODO: Add your location
+  name: "Seun Olarewaju", // TODO: Replace with your name (e.g., "Jane Developer")
+  title: "Full Stack Developer", // TODO: e.g., "Full Stack Developer", "Frontend Engineer"
+  bio: "I am a Full Stack Developer with a passion for creating innovative and user-friendly web applications. I have experience in building scalable and secure applications using modern web technologies. I am also a team player and enjoy working collaboratively with others to deliver high-quality results.", // TODO: Write your short bio
+  location: "Lagos, Nigeria", // TODO: Add your location
   timezone: "UTC+0", // TODO: Add your timezone (helps with remote work)
   availability: "Available for hire", // TODO: or "Open to opportunities", "Currently employed but open to interesting projects"
-  email: "your.email@example.com", // TODO: Add your professional email
+  email: "sewinwaju@gmail.com", // TODO: Add your professional email
   resumeUrl: "/resume.pdf", // TODO: Upload resume to /public folder and update path
-  photoUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400", // TODO: Replace with your professional photo
+  photoUrl: "/images/profile.png", // TODO: Add your photo as 'profile.png' in public/images folder
 };
 
 // ==================
@@ -25,14 +25,14 @@ export const personalInfo = {
 // ==================
 // TODO: USER INPUT - Add your best/most impressive project for the homepage hero
 export const featuredProject = {
-  title: "Featured Project Title", // TODO: Your best project name
-  description: "One-line description of what this project does and why it's impressive", // TODO: Short impactful description
-  longDescription: "Detailed paragraph about the project. Explain what problem it solves, what makes it special, your role in building it, and the impact it has had. This appears below the hero section.", // TODO: Write detailed description
-  image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200", // TODO: Replace with your project screenshot/banner
+  title: "Seun Student Tracker", // TODO: Your best project name
+  description: "A student tracker application that helps students to keep track of their assignments and deadlines", // TODO: Short impactful description
+  longDescription: "Seun Tracker is a modern productivity and habit-tracking platform built to help students and professionals stay organized. It turns goals into clear daily actions, making it easy to track habits, set milestones, and monitor progress through a smart dashboard. Unlike basic to-do lists, Seun Tracker focuses on consistency and long-term growth, offering habit reminders, real-time insights, a distraction-free dashboard, and seamless cloud sync across all devices.", // TODO: Write detailed description
+  image: "/images/seun-student-tracker.png", // TODO: Add image as 'seun-student-tracker.png' in public/images
   video: "", // TODO: OPTIONAL - Add project demo video URL (YouTube, Vimeo, or direct URL)
-  technologies: ["React", "TypeScript", "Node.js", "Tailwind CSS"], // TODO: List all technologies used
-  liveUrl: "https://your-project.com", // TODO: Add live demo URL (or leave empty if not deployed)
-  githubUrl: "https://github.com/yourusername/project", // TODO: Add GitHub repository URL
+  technologies: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS"], // TODO: List all technologies used
+  liveUrl: "https://seun-tracker-forportfolio.onrender.com/", // TODO: Add live demo URL (or leave empty if not deployed)
+  githubUrl: "https://github.com/box129/Tracker-ForPortfolio", // TODO: Add GitHub repository URL
   featured: true,
 };
 
@@ -43,32 +43,32 @@ export const featuredProject = {
 export const recentProjects = [
   {
     id: "project-1",
-    title: "Project Name 1", // TODO: Project title
-    shortDescription: "Brief 1-2 sentence description for the card view", // TODO: Short description
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800", // TODO: Replace with project screenshot
+    title: "Seun Student Tracker", // TODO: Project title
+    shortDescription: "A student tracker application that helps students to keep track of their assignments and deadlines", // TODO: Short description
+    image: "/images/seun-student-tracker.png", // TODO: Add image as 'seun-student-tracker.png' in public/images
     technologies: ["React", "Next.js", "Tailwind CSS"], // TODO: List technologies
-    liveUrl: "", // TODO: Add live URL or leave empty
-    githubUrl: "", // TODO: Add GitHub URL or leave empty
-    featured: false,
+    liveUrl: "https://seun-tracker-forportfolio.onrender.com/", // TODO: Add live URL or leave empty
+    githubUrl: "https://github.com/box129/Tracker-ForPortfolio", // TODO: Add GitHub URL or leave empty
+    featured: true,
   },
   {
     id: "project-2",
-    title: "Project Name 2",
-    shortDescription: "Brief description of this project",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800", // TODO: Replace
+    title: "ToDo App",
+    shortDescription: "A simple to-do app that helps users to keep track of their tasks",
+    image: "/images/todo-app.png", // TODO: Add image as 'todo-app.png' in public/images
     technologies: ["TypeScript", "Node.js", "Express"], // TODO: Update
-    liveUrl: "",
-    githubUrl: "",
+    liveUrl: "https://box129.github.io/ToDo-ForPortfolio/",
+    githubUrl: "https://github.com/box129/ToDo-ForPortfolio",
     featured: false,
   },
   {
     id: "project-3",
-    title: "Project Name 3",
-    shortDescription: "Brief description of this project",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800", // TODO: Replace
-    technologies: ["Python", "Django", "PostgreSQL"], // TODO: Update
-    liveUrl: "",
-    githubUrl: "",
+    title: "Leadway Form Page",
+    shortDescription: "A form page for Leadway",
+    image: "/images/leadway-form.png", // TODO: Add image as 'leadway-form.png' in public/images
+    technologies: ["HTML", "CSS", "JavaScript"], // TODO: Update
+    liveUrl: "https://box129.github.io/RSAClientSide-ForPortfolio/",
+    githubUrl: "https://github.com/box129/RSAClientSide-ForPortfolio",
     featured: false,
   },
   // TODO: Add more projects as needed
@@ -81,30 +81,30 @@ export const recentProjects = [
 export const allProjects = [
   {
     id: "project-slug-1", // Used in URL: /projects/project-slug-1
-    title: "Comprehensive Project Title",
-    shortDescription: "One sentence for card view",
-    fullDescription: "Detailed description for the project detail page. Explain what the project is, what it does, and why it matters.",
+    title: "Seun Student Tracker",
+    shortDescription: "A student tracker application that helps students to keep track of their assignments and deadlines",
+    fullDescription: "Seun Student Tracker is a student tracker application that helps students to keep track of their assignments and deadlines. It is a simple and easy to use application that helps students to stay organized and on track with their assignments.",
 
     // Project images
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200", // Main image
+    image: "/images/seun-student-tracker.png", // Main image
     images: [ // Additional screenshots for gallery
       {
-        url: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200",
+        url: "/images/seun-student-tracker.png",
         caption: "Main dashboard view",
         alt: "Project dashboard screenshot",
       },
       {
-        url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200",
+        url: "/images/seun-student-tracker.png",
         caption: "Mobile responsive design",
         alt: "Mobile view screenshot",
       },
     ],
 
     technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-    liveUrl: "https://project.com",
-    githubUrl: "https://github.com/you/project",
+    liveUrl: "https://seun-tracker-forportfolio.onrender.com/",
+    githubUrl: "https://github.com/box129/Tracker-ForPortfolio",
     featured: true,
-    completedDate: "2024-03",
+    completedDate: "2025-11",
     role: "Full Stack Developer", // Your role in the project
 
     // Detailed sections for project detail page
@@ -112,18 +112,25 @@ export const allProjects = [
       overview: {
         summary: "Brief overview of what this project is and what it accomplishes.",
         keyFeatures: [
-          "Key feature or capability #1",
-          "Key feature or capability #2",
-          "Key feature or capability #3",
+          "User Authentication",
+          "Assignment Management",
+          "Notification System",
+          "Progress Tracking",
+          "Deadline Alerts",
+          "Mobile Responsive Design",
         ],
-        duration: "3 months", // How long it took to build
+        duration: "1 month", // How long it took to build
         role: "Solo Developer", // or "Lead Developer", "Frontend Developer", etc.
       },
       challenge: {
         problem: "Detailed explanation of the problem this project solves. What need does it address? Who is it for?",
         constraints: [
-          "Constraint or requirement #1",
-          "Constraint or requirement #2",
+          "User Authentication",
+          "Assignment Management",
+          "Notification System",
+          "Progress Tracking",
+          "Deadline Alerts",
+          "Mobile Responsive Design",
         ],
       },
       solution: {
@@ -158,11 +165,15 @@ export const allProjects = [
       },
       outcomes: {
         results: [
-          "Result or achievement #1 (e.g., deployed to 100+ users)",
-          "Result or achievement #2 (e.g., 50% performance improvement)",
+          "User Authentication",
+          "Assignment Management",
+          "Notification System",
+          "Progress Tracking",
+          "Deadline Alerts",
+          "Mobile Responsive Design",
         ],
         metrics: [ // OPTIONAL: Quantifiable metrics
-          { label: "Users", value: "500+" },
+          { label: "Users", value: "50+" },
           { label: "Performance", value: "300ms load time" },
         ],
         learnings: [
@@ -176,6 +187,139 @@ export const allProjects = [
       },
     },
   },
+  {
+    id: "todo-app-portfolio",
+    title: "Seun Todo App",
+    shortDescription: "A clean, responsive task manager designed for productivity.",
+    fullDescription:
+      "A simple but effective todo application that enables users to add, check off, and manage daily tasks. Built as a lightweight productivity tool with smooth interactions and local storage persistence.",
+
+    image: "/images/todo-app.png",
+    images: [
+      {
+        url: "/images/todo-app.png",
+        caption: "Home screen",
+        alt: "Todo app home page",
+      },
+      {
+        url: "/images/todo-app.png",
+        caption: "Mobile layout",
+        alt: "Todo app mobile view",
+      },
+    ],
+
+    technologies: ["React", "TypeScript", "LocalStorage"],
+    liveUrl: "https://your-todo-live-link.com",
+    githubUrl: "https://github.com/box129/todo-app",
+    featured: false,
+    completedDate: "2025-03",
+    role: "Frontend Developer",
+
+    sections: {
+      overview: {
+        summary: "A simple productivity tool for managing daily tasks efficiently.",
+        keyFeatures: [
+          "Add & remove tasks",
+          "Check-off functionality",
+          "LocalStorage persistence",
+          "Mobile-friendly design",
+        ],
+        duration: "1 week",
+        role: "Solo Developer",
+      },
+      challenge: {
+        problem:
+          "People often need a quick way to organize daily tasks without signing up or downloading anything.",
+        constraints: ["No backend", "Must work offline", "Very lightweight"],
+      },
+      solution: {
+        approach:
+          "Focused on speed and simplicity. Used React state management with LocalStorage to persist tasks.",
+        technicalDecisions: [
+          "Used React for UI rendering",
+          "Used LocalStorage instead of backend",
+          "Minimal UI with flexible layout",
+        ],
+        architectureDiagram: "",
+      },
+      techStack: {
+        technologies: [
+          { name: "React", purpose: "UI rendering and state management", icon: "react" },
+          { name: "TypeScript", purpose: "Reliable type-safe development", icon: "code" },
+        ],
+        codeSnippets: [],
+      },
+      outcomes: {
+        results: ["Fully offline", "Fast performance", "Clean UI"],
+        metrics: [],
+        learnings: ["State management basics", "Component composition"],
+        futureImprovements: ["Task categories", "Cloud sync"],
+      },
+    },
+  },
+  {
+    id: "leadway-form-clone",
+    title: "Leadway Form Page Clone",
+    shortDescription: "A responsive, pixel-perfect clone of Leadway’s onboarding form.",
+    fullDescription:
+      "A frontend replication of Leadway’s official form page, built to practice UI accuracy, validation, layout structuring, and user experience optimization.",
+
+    image: "/images/leadway-form.png",
+    images: [
+      {
+        url: "/images/leadway-form.png",
+        caption: "Form layout",
+        alt: "Leadway form clone UI",
+      },
+    ],
+
+    technologies: ["HTML", "CSS", "JavaScript"],
+    liveUrl: "https://your-leadway-clone-live.com",
+    githubUrl: "https://github.com/box129/leadway-form",
+    featured: false,
+    completedDate: "2025-02",
+    role: "Frontend Developer",
+
+    sections: {
+      overview: {
+        summary: "A clone of the Leadway form page with responsive UI.",
+        keyFeatures: [
+          "Modern form design",
+          "Validation logic",
+          "Accessibility-friendly structure",
+          "Responsive layout",
+        ],
+        duration: "4 days",
+        role: "Solo Developer",
+      },
+      challenge: {
+        problem: "Rebuilding a real-world form UI with pixel-level accuracy.",
+        constraints: ["No frameworks", "Must match original layout", "Clean and reusable CSS"],
+      },
+      solution: {
+        approach:
+          "Focused on CSS grid + flexbox, semantic HTML, and clean input validation.",
+        technicalDecisions: ["Pure HTML/CSS/JS", "No libraries", "Mobile-first design"],
+        architectureDiagram: "",
+      },
+      techStack: {
+        technologies: [
+          { name: "HTML", purpose: "Structure", icon: "code" },
+          { name: "CSS", purpose: "Styling & layout", icon: "code" },
+          { name: "JavaScript", purpose: "Validation logic", icon: "code" },
+        ],
+        codeSnippets: [],
+      },
+      outcomes: {
+        results: ["Pixel-perfect clone", "Improved CSS mastery"],
+        metrics: [],
+        learnings: ["Responsive grids", "Cross-browser form styling"],
+        futureImprovements: ["Connect to backend", "Add multi-step form"],
+      },
+    },
+  },
+
+
   // TODO: Copy the above template and add all your projects
   // Aim for at least 3-6 projects to showcase your range
 ];
@@ -217,9 +361,9 @@ export const aboutData = {
 
   bio: {
     paragraphs: [
-      "First paragraph: Tell your story. How did you get into development? What sparked your interest in programming?",
-      "Second paragraph: What drives you? What's your approach to building software? What kind of problems do you love solving?",
-      "Third paragraph: What are you passionate about? What technologies excite you? What are your goals?",
+      "I'm Seun Olarewaju, a Software Engineering student and Developer based in Osun, Nigeria. My journey into tech started with a curiosity for how things work, which quickly evolved into a passion for building functional and user-friendly applications. Currently pursuing my B.Sc. in Software Engineering at Osun State University, I balance my academic studies with hands-on development work.",
+      "I have professional experience as a Junior Software Developer at Leadway Assurance, where I contributed to internal tools and learned the ropes of agile development in a corporate environment. As a freelancer, I've honed my full-stack skills by building responsive web applications and experimenting with modern technologies like React and Node.js.",
+      "I'm driven by the opportunity to solve real problems through code. whether it's building a drag-and-drop interface or setting up a backend API. I thrive in collaborative environments and am always eager to learn from senior developers and contribute to open-source projects.",
     ],
   },
 
@@ -228,68 +372,76 @@ export const aboutData = {
     frontend: [
       {
         name: "React",
-        proficiency: 90, // 0-100 or use "Expert", "Advanced", "Intermediate", "Beginner"
-        yearsOfExperience: 3,
+        proficiency: 85,
+        yearsOfExperience: 2,
         icon: "react" as const,
       },
       {
-        name: "TypeScript",
-        proficiency: 85,
-        yearsOfExperience: 2,
+        name: "JavaScript",
+        proficiency: 90,
+        yearsOfExperience: 3,
         icon: "code" as const,
       },
       {
-        name: "Next.js",
-        proficiency: 80,
-        yearsOfExperience: 2,
+        name: "HTML/CSS",
+        proficiency: 95,
+        yearsOfExperience: 3,
         icon: "layout" as const,
       },
-      // TODO: Add all your frontend skills
+      {
+        name: "Tailwind CSS",
+        proficiency: 85,
+        yearsOfExperience: 2,
+        icon: "palette" as const,
+      },
     ],
     backend: [
       {
         name: "Node.js",
-        proficiency: 85,
-        yearsOfExperience: 3,
+        proficiency: 80,
+        yearsOfExperience: 2,
         icon: "server" as const,
       },
       {
         name: "Express",
         proficiency: 80,
-        yearsOfExperience: 3,
+        yearsOfExperience: 2,
         icon: "server" as const,
       },
-      // TODO: Add all your backend skills
     ],
     tools: [
       {
-        name: "Git",
-        proficiency: 90,
-        yearsOfExperience: 4,
+        name: "Git & GitHub",
+        proficiency: 85,
+        yearsOfExperience: 3,
         icon: "git-branch" as const,
       },
       {
         name: "VS Code",
-        proficiency: 95,
-        yearsOfExperience: 4,
+        proficiency: 90,
+        yearsOfExperience: 3,
         icon: "code" as const,
       },
-      // TODO: Add tools you use
     ],
     softSkills: [
       {
-        name: "Problem Solving",
+        name: "Team Collaboration",
         proficiency: 90,
-        description: "Strong analytical thinking and debugging skills",
+        description: "Experience working in agile teams and participating in code reviews",
+        icon: "message-circle" as const,
+      },
+      {
+        name: "Problem Solving",
+        proficiency: 85,
+        description: "Ability to debug complex issues and optimize performance",
         icon: "lightbulb" as const,
       },
       {
         name: "Communication",
-        proficiency: 85,
-        description: "Clear technical communication with team and stakeholders",
+        proficiency: 90,
+        description: "Proficient in English; clear technical communication",
         icon: "message-circle" as const,
       },
-      // TODO: Add soft skills
     ],
   },
 
@@ -297,44 +449,56 @@ export const aboutData = {
   experience: [
     {
       type: "work" as const,
-      company: "Company Name",
-      role: "Your Role",
-      startDate: "2023-01",
-      endDate: "Present", // or specific end date like "2024-12"
+      company: "Leadway Assurance",
+      role: "Junior Software Developer (Intern)",
+      startDate: "2025-04",
+      endDate: "2025-09",
       achievements: [
-        "Key achievement or responsibility #1 with measurable impact",
-        "Key achievement or responsibility #2 showing your contributions",
-        "Key achievement or responsibility #3 demonstrating growth",
-      ],
-      logo: "", // Optional: company logo URL
-    },
-    {
-      type: "education" as const,
-      company: "University Name",
-      role: "Degree Name",
-      startDate: "2019-09",
-      endDate: "2023-05",
-      achievements: [
-        "Relevant coursework or achievements",
-        "GPA or honors if applicable",
+        "Built UI components and integrated them with backend APIs for internal tools.",
+        "Implemented and tested REST APIs to ensure seamless frontend-backend communication.",
+        "Collaborated with senior developers on debugging, code cleanup, and performance improvements.",
+        "Participated in agile ceremonies including standups and review sessions.",
       ],
       logo: "",
     },
-    // TODO: Add all work experience and education entries
+    {
+      type: "work" as const,
+      company: "Self Employed",
+      role: "Freelance Full-Stack Developer",
+      startDate: "2023-01",
+      endDate: "Present",
+      achievements: [
+        "Developed full-stack web applications using React, Node.js, and Express.",
+        "Created responsive, mobile-friendly layouts and forms ensuring cross-device compatibility.",
+        "Managed backend routing, server logic, and database connections for client projects.",
+        "Contributed to open-source projects to gain collaborative development experience.",
+      ],
+      logo: "",
+    },
+    {
+      type: "education" as const,
+      company: "Osun State University",
+      role: "B.Sc. Software Engineering",
+      startDate: "2023-01",
+      endDate: "Present",
+      achievements: [
+        "Focusing on software engineering principles, algorithms, and system design.",
+        "Active student building practical projects alongside academic coursework.",
+      ],
+      logo: "",
+    },
   ],
 
   currentlyLearning: [
-    "Technology or skill you're currently learning #1",
-    "Technology or skill you're currently learning #2",
-    "Technology or skill you're currently learning #3",
-    // TODO: What are you learning right now?
+    "System Design & Architecture",
+    "Advanced React Patterns",
+    "Cloud Deployment (AWS/Vercel)",
   ],
 
   interests: [
-    "Interest or hobby #1",
-    "Interest or hobby #2",
-    "Interest or hobby #3",
-    // TODO: Add personal interests to humanize your profile (optional)
+    "Open Source Contribution",
+    "Tech Community Building",
+    "Football",
   ],
 
   resumeUrl: personalInfo.resumeUrl,
@@ -354,28 +518,28 @@ export const contactData = {
   email: personalInfo.email,
 
   location: {
-    city: "Your City",
-    country: "Your Country",
+    city: "Osogbo",
+    country: "Nigeria",
     timezone: "UTC+0", // Important for remote work
   },
 
   socialLinks: [
     {
       platform: "LinkedIn",
-      username: "yourname",
-      url: "https://linkedin.com/in/yourname", // TODO: Add your LinkedIn
+      username: "Oluwaseun Olarewaju",
+      url: "https://www.linkedin.com/in/oluwaseun-olarewaju-ba4ba8316/", // TODO: Add your LinkedIn
       icon: "linkedin" as const,
     },
     {
       platform: "GitHub",
-      username: "yourusername",
-      url: "https://github.com/yourusername", // TODO: Add your GitHub
+      username: "box129",
+      url: "https://github.com/box129", // TODO: Add your GitHub
       icon: "github" as const,
     },
     {
       platform: "Twitter",
-      username: "@yourhandle",
-      url: "https://twitter.com/yourhandle", // TODO: Add if you have Twitter
+      username: "seunsolidity",
+      url: "https://x.com/seunsolidity", // TODO: Add if you have Twitter
       icon: "twitter" as const,
     },
     // TODO: Add other platforms (Dev.to, Medium, personal blog, etc.)
@@ -400,9 +564,9 @@ export const contactData = {
 export const siteMetadata = {
   title: `${personalInfo.name} | ${personalInfo.title}`,
   description: `Portfolio of ${personalInfo.name} - ${personalInfo.title} specializing in modern web development. Explore my projects and get in touch.`,
-  url: "https://yourwebsite.com", // TODO: Add your domain when deployed
+  url: "https://box129.com", // TODO: Add your domain when deployed
   ogImage: "/og-image.jpg", // TODO: Create and add Open Graph image to /public folder
-  twitterHandle: "@yourhandle", // TODO: Add your Twitter handle
+  twitterHandle: "@seunsolidity", // TODO: Add your Twitter handle
 };
 
 // ==================

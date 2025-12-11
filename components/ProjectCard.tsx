@@ -17,7 +17,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group relative card-hover bg-neutral-800 overflow-hidden"
+      className="group relative card-hover overflow-hidden"
     >
       {/* Project Image */}
       <div className="relative h-48 overflow-hidden">
@@ -27,8 +27,8 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
-        {/* Hover overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+        {/* Hover overlay - neon tint on hover */}
+        <div className="absolute inset-0 bg-primary-900/0 group-hover:bg-primary-900/20 transition-colors duration-300" />
 
         {/* Featured badge */}
         {project.featured && (
@@ -43,7 +43,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
         <h3 className="text-xl font-heading font-bold text-white mb-2 group-hover:text-primary-400 transition-colors">
           {project.title}
         </h3>
-        <p className="text-neutral-400 text-sm mb-4 line-clamp-2">
+        <p className="text-contrast-100 text-sm mb-4 line-clamp-2">
           {project.shortDescription}
         </p>
 
@@ -52,13 +52,13 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           {project.technologies.slice(0, 4).map((tech) => (
             <span
               key={tech}
-              className="px-2 py-1 bg-neutral-700 text-neutral-300 text-xs rounded-md font-medium"
+              className="px-2.5 py-1 bg-contrast-900 text-primary-300 text-xs rounded-lg font-medium border border-primary-500/20"
             >
               {tech}
             </span>
           ))}
           {project.technologies.length > 4 && (
-            <span className="px-2 py-1 text-neutral-500 text-xs">
+            <span className="px-2 py-1 text-contrast-100 text-xs font-medium">
               +{project.technologies.length - 4} more
             </span>
           )}
@@ -77,7 +77,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-neutral-400 hover:text-primary-400 transition-colors"
+              className="p-2 text-contrast-100 hover:text-primary-400 transition-colors"
               title="Live Demo"
             >
               <ExternalLink className="w-5 h-5" />
@@ -88,7 +88,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-neutral-400 hover:text-primary-400 transition-colors"
+              className="p-2 text-contrast-100 hover:text-primary-400 transition-colors"
               title="View Code"
             >
               <Github className="w-5 h-5" />
@@ -106,7 +106,7 @@ export function ProjectCardCompact({ project }: ProjectCardProps) {
     <Link href={`/projects/${project.id}`}>
       <motion.div
         whileHover={{ y: -8 }}
-        className="group relative card bg-neutral-800 overflow-hidden cursor-pointer"
+        className="group relative card overflow-hidden cursor-pointer"
       >
         {/* Image */}
         <div className="relative h-40 overflow-hidden">
@@ -120,7 +120,7 @@ export function ProjectCardCompact({ project }: ProjectCardProps) {
         </div>
 
         {/* Content overlay */}
-        <div className="absolute inset-0 flex flex-col justify-end p-4">
+        <div className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-contrast-900 to-transparent">
           <h3 className="text-lg font-heading font-bold text-white mb-1 group-hover:text-primary-400 transition-colors">
             {project.title}
           </h3>
@@ -128,7 +128,7 @@ export function ProjectCardCompact({ project }: ProjectCardProps) {
             {project.technologies.slice(0, 3).map((tech) => (
               <span
                 key={tech}
-                className="px-2 py-0.5 bg-neutral-800/80 text-neutral-300 text-xs rounded"
+                className="px-2 py-0.5 bg-contrast-900/80 backdrop-blur-sm text-primary-300 text-xs rounded border border-primary-500/20"
               >
                 {tech}
               </span>

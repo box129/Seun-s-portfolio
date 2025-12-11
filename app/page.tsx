@@ -18,17 +18,17 @@ export default function HomePage() {
     <div className="relative">
       {/* Hero Section with Scroll Expansion */}
       <section className="relative -mt-20">
-        {/* TODO: USER INPUT - Update featured project in lib/site-data.ts */}
+        {/* Hero Video Background */}
         <HeroScrollExpansion
-          mediaUrl={featuredProject.image}
-          mediaType="image"
+          mediaUrl="https://cdn.pixabay.com/video/2019/04/23/23011-332483109_large.mp4"
+          mediaType="video"
           title={personalInfo.name}
           subtitle={personalInfo.title}
         />
       </section>
 
       {/* Featured Project Details */}
-      <section className="section-mobile bg-neutral-900">
+      <section className="section-mobile bg-contrast-850 border-b border-contrast-800/50">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -48,7 +48,7 @@ export default function HomePage() {
               {featuredProject.title}
             </h2>
 
-            <p className="text-xl text-neutral-400 mb-6">
+            <p className="text-xl text-contrast-100 mb-6">
               {featuredProject.longDescription}
             </p>
 
@@ -57,7 +57,7 @@ export default function HomePage() {
               {featuredProject.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="px-4 py-2 bg-neutral-800 text-primary-400 border border-primary-500/30 rounded-lg font-semibold text-sm"
+                  className="px-4 py-2 bg-contrast-900 text-primary-400 border border-primary-500/30 rounded-lg font-semibold text-sm"
                 >
                   {tech}
                 </span>
@@ -94,7 +94,7 @@ export default function HomePage() {
       </section>
 
       {/* Quick Introduction */}
-      <section className="section bg-gradient-to-b from-neutral-900 to-neutral-800">
+      <section className="section bg-contrast-900 border-b border-contrast-800/30">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -108,7 +108,7 @@ export default function HomePage() {
                 <span className="text-gradient">{personalInfo.name.split(' ')[0]}</span>
               </h2>
               {/* TODO: USER INPUT - Update bio in lib/site-data.ts */}
-              <p className="text-lg text-neutral-300 leading-relaxed mb-8">
+              <p className="text-lg text-contrast-100 leading-relaxed mb-8">
                 {personalInfo.bio}
               </p>
               <Link href="/about" className="btn-primary inline-flex">
@@ -121,7 +121,7 @@ export default function HomePage() {
       </section>
 
       {/* Recent Projects Grid */}
-      <section className="section bg-neutral-800">
+      <section className="section bg-contrast-850">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -133,7 +133,7 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-heading font-black text-white mb-4">
               Recent Projects
             </h2>
-            <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-lg text-contrast-100/70 max-w-2xl mx-auto">
               Here are some of my latest works. Check them out to see what I've been building.
             </p>
           </motion.div>
@@ -155,7 +155,7 @@ export default function HomePage() {
       </section>
 
       {/* Skills Highlight */}
-      <section className="section bg-neutral-900 grid-pattern">
+      <section className="section bg-contrast-900 grid-pattern">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -167,7 +167,7 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-heading font-black text-white mb-4">
               Core Technologies
             </h2>
-            <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-lg text-contrast-100/70 max-w-2xl mx-auto">
               Technologies I work with to build modern web applications
             </p>
           </motion.div>
@@ -182,19 +182,22 @@ export default function HomePage() {
       </section>
 
       {/* Call to Action */}
-      <section className="section bg-gradient-to-br from-primary-900/20 via-neutral-900 to-secondary-900/20">
+      <section className="section bg-gradient-to-br from-contrast-900 via-contrast-850 to-primary-900/20 border-t border-primary-500/20">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto text-center glass p-12 rounded-2xl"
+            className="max-w-3xl mx-auto text-center glass p-12 rounded-2xl relative overflow-hidden"
           >
+            {/* Glow effect */}
+            <div className="absolute inset-0 bg-primary-500/5 blur-3xl rounded-full" />
+            <div className="relative z-10">
             <h2 className="text-3xl md:text-5xl font-heading font-black text-white mb-4">
               Let's Work Together
             </h2>
-            <p className="text-lg text-neutral-300 mb-8">
+            <p className="text-lg text-contrast-100 mb-8">
               {personalInfo.availability}. Let's build something amazing together!
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
@@ -210,6 +213,7 @@ export default function HomePage() {
                 <Download className="w-5 h-5" />
                 Download Resume
               </a>
+            </div>
             </div>
           </motion.div>
         </div>

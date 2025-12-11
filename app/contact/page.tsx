@@ -31,9 +31,9 @@ export default function ContactPage() {
   const statusConfig = availabilityConfig[contactData.availability.status];
 
   return (
-    <div className="min-h-screen bg-neutral-900">
+    <div className="min-h-screen bg-contrast-900">
       {/* Hero Section */}
-      <section className="section-mobile bg-gradient-to-b from-neutral-800 to-neutral-900 grid-pattern">
+      <section className="section-mobile bg-contrast-850 border-b border-contrast-800/50 grid-pattern">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -45,14 +45,14 @@ export default function ContactPage() {
               Let's Work <span className="text-gradient">Together</span>
             </h1>
             {/* TODO: USER INPUT - Update availability message in lib/site-data.ts */}
-            <p className="text-lg md:text-xl text-neutral-400 mb-6">
+            <p className="text-lg md:text-xl text-contrast-100 mb-6">
               {contactData.availability.message}
             </p>
 
             {/* Availability Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-800 rounded-full">
-              <span className={`w-3 h-3 ${statusConfig.color} rounded-full animate-pulse`} />
-              <span className="text-neutral-300 font-semibold">{statusConfig.text}</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-contrast-900 rounded-full border border-primary-500/20 shadow-[0_0_10px_rgba(0,178,255,0.1)]">
+              <span className={`w-3 h-3 ${statusConfig.color} rounded-full animate-pulse shadow-[0_0_8px_currentColor]`} />
+              <span className="text-contrast-50 font-semibold">{statusConfig.text}</span>
             </div>
           </motion.div>
         </div>
@@ -88,9 +88,9 @@ export default function ContactPage() {
                 </h2>
 
                 {/* Email */}
-                <div className="card bg-neutral-800 hover:bg-neutral-700 transition-colors mb-4">
+                <div className="card bg-contrast-850 p-4 mb-4 hover:border-primary-500/50">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-500/10 rounded-lg">
+                    <div className="p-3 bg-contrast-900 rounded-lg border border-contrast-800">
                       <Icons.Mail className="w-6 h-6 text-primary-400" />
                     </div>
                     <div className="flex-1">
@@ -106,17 +106,17 @@ export default function ContactPage() {
                 </div>
 
                 {/* Location */}
-                <div className="card bg-neutral-800 mb-4">
+                <div className="card bg-contrast-850 p-4 mb-4 hover:border-primary-500/50">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-500/10 rounded-lg">
+                    <div className="p-3 bg-contrast-900 rounded-lg border border-contrast-800">
                       <Icons.MapPin className="w-6 h-6 text-primary-400" />
                     </div>
                     <div>
                       <h3 className="text-white font-semibold mb-1">Location</h3>
-                      <p className="text-neutral-400">
+                      <p className="text-contrast-100/80">
                         {contactData.location.city}, {contactData.location.country}
                       </p>
-                      <p className="text-neutral-500 text-sm mt-1">
+                      <p className="text-contrast-100/50 text-sm mt-1">
                         {contactData.location.timezone}
                       </p>
                     </div>
@@ -124,14 +124,14 @@ export default function ContactPage() {
                 </div>
 
                 {/* Response Time */}
-                <div className="card bg-neutral-800">
+                <div className="card bg-contrast-850 p-4 hover:border-primary-500/50">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-500/10 rounded-lg">
+                    <div className="p-3 bg-contrast-900 rounded-lg border border-contrast-800">
                       <Icons.Clock className="w-6 h-6 text-primary-400" />
                     </div>
                     <div>
                       <h3 className="text-white font-semibold mb-1">Response Time</h3>
-                      <p className="text-neutral-400">
+                      <p className="text-contrast-100/80">
                         I typically respond within {contactData.responseTime}
                       </p>
                     </div>
@@ -156,13 +156,13 @@ export default function ContactPage() {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.05, y: -5 }}
                         whileTap={{ scale: 0.95 }}
-                        className="card bg-neutral-800 hover:bg-primary-500 transition-all group text-center"
+                        className="card bg-contrast-850 hover:bg-contrast-800 hover:border-primary-500 p-6 transition-all group text-center hover:shadow-[0_0_15px_rgba(0,178,255,0.2)]"
                       >
-                        <IconComponent className="w-8 h-8 text-primary-400 group-hover:text-white transition-colors mx-auto mb-3" />
-                        <h4 className="text-white font-semibold mb-1 group-hover:scale-105 transition-transform">
+                        <IconComponent className="w-8 h-8 text-primary-400 group-hover:text-primary-300 transition-colors mx-auto mb-3" />
+                        <h4 className="text-white font-semibold mb-1 group-hover:text-primary-200 transition-colors">
                           {social.platform}
                         </h4>
-                        <p className="text-neutral-400 text-sm group-hover:text-neutral-200 transition-colors">
+                        <p className="text-contrast-100/60 text-sm group-hover:text-primary-200/80 transition-colors">
                           {social.username}
                         </p>
                       </motion.a>
@@ -173,16 +173,16 @@ export default function ContactPage() {
 
               {/* Optional: Calendly Link */}
               {contactData.calendlyUrl && (
-                <div className="card bg-gradient-to-br from-primary-500/10 to-secondary-500/10 border border-primary-500/30">
+                <div className="card bg-gradient-to-br from-contrast-900 via-contrast-850 to-primary-900/10 border border-primary-500/20 p-4 mt-8">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-500/20 rounded-lg">
+                    <div className="p-3 bg-contrast-900 rounded-lg border border-contrast-800">
                       <Icons.Calendar className="w-6 h-6 text-primary-400" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-white font-semibold mb-2">
                         Prefer to Schedule a Call?
                       </h3>
-                      <p className="text-neutral-400 text-sm mb-4">
+                      <p className="text-contrast-100/80 text-sm mb-4">
                         Book a time that works for you
                       </p>
                       <a

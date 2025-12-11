@@ -31,12 +31,12 @@ export function SkillBadge({ skill, index = 0 }: SkillBadgeProps) {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.3, delay: index * 0.05 }}
       whileHover={{ scale: 1.1, y: -5 }}
-      className="flex flex-col items-center gap-3 p-4 bg-neutral-800 rounded-xl hover:bg-neutral-700 transition-colors group"
+      className="flex flex-col items-center gap-3 p-4 bg-contrast-850 border border-contrast-800/50 rounded-xl hover:border-primary-500/50 hover:shadow-[0_0_15px_rgba(0,178,255,0.15)] transition-all group"
     >
       <div className="p-3 bg-primary-500/10 rounded-lg group-hover:bg-primary-500/20 transition-colors">
         <IconComponent className="w-8 h-8 text-primary-400" />
       </div>
-      <span className="text-sm font-semibold text-neutral-300 group-hover:text-white transition-colors">
+      <span className="text-sm font-semibold text-contrast-100 group-hover:text-primary-400 transition-colors">
         {skill.name}
       </span>
     </motion.div>
@@ -54,7 +54,7 @@ export function SkillCard({ skill, index = 0 }: { skill: Skill; index?: number }
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="card bg-neutral-800 hover:bg-neutral-700 transition-colors"
+      className="card bg-contrast-850 border border-contrast-800/50 hover:shadow-[0_0_20px_rgba(0,178,255,0.1)] transition-all"
     >
       <div className="flex items-start gap-4">
         {/* Icon */}
@@ -68,7 +68,7 @@ export function SkillCard({ skill, index = 0 }: { skill: Skill; index?: number }
             <div>
               <h3 className="text-lg font-semibold text-white">{skill.name}</h3>
               {skill.yearsOfExperience && (
-                <p className="text-sm text-neutral-400">
+                <p className="text-sm text-contrast-100/70">
                   {skill.yearsOfExperience} year{skill.yearsOfExperience !== 1 ? 's' : ''} experience
                 </p>
               )}
@@ -80,17 +80,17 @@ export function SkillCard({ skill, index = 0 }: { skill: Skill; index?: number }
 
           {/* Description */}
           {skill.description && (
-            <p className="text-sm text-neutral-400 mb-3">{skill.description}</p>
+            <p className="text-sm text-contrast-100/80 mb-3">{skill.description}</p>
           )}
 
           {/* Proficiency bar */}
           {typeof proficiency === 'number' && (
-            <div className="w-full h-2 bg-neutral-700 rounded-full overflow-hidden">
+            <div className="w-full h-2 bg-contrast-900 rounded-full overflow-hidden border border-contrast-800">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: `${proficiency}%` }}
                 transition={{ duration: 1, delay: index * 0.1 + 0.3 }}
-                className="h-full bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full"
+                className="h-full bg-gradient-to-r from-primary-600 to-accent-500 rounded-full shadow-[0_0_10px_rgba(0,178,255,0.4)]"
               />
             </div>
           )}

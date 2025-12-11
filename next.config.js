@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export', // Required for GitHub Pages (static site generation)
   images: {
-    domains: ['images.unsplash.com'],
+    unoptimized: true, // Required as Next.js Image Optimization API doesn't work with static export
   },
 }
 

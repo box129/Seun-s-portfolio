@@ -39,7 +39,7 @@ export function Navigation() {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || pathname !== '/'
-          ? 'bg-neutral-900/95 backdrop-blur-lg border-b border-neutral-800 shadow-lg'
+          ? 'bg-contrast-900/90 backdrop-blur-md border-b border-contrast-800/50 shadow-[0_4px_20px_rgba(0,178,255,0.05)]'
           : 'bg-transparent'
       }`}
     >
@@ -54,7 +54,7 @@ export function Navigation() {
             >
               {/* TODO: USER INPUT - Update with your name/logo */}
               <span className="text-gradient">{personalInfo.name.split(' ')[0]}</span>
-              <span className="text-white ml-1">{personalInfo.name.split(' ').slice(1).join(' ')}</span>
+              <span className="text-contrast-50 ml-1">{personalInfo.name.split(' ').slice(1).join(' ')}</span>
             </motion.div>
           </Link>
 
@@ -76,7 +76,7 @@ export function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-neutral-300 hover:text-white transition-colors"
+            className="md:hidden p-2 text-primary-200 hover:text-primary-500 transition-colors"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
@@ -95,9 +95,9 @@ export function Navigation() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden mt-4 py-4 border-t border-neutral-800"
+              className="md:hidden mt-4 py-4 border-t border-contrast-800/50 bg-contrast-900/95 backdrop-blur-md rounded-b-xl shadow-lg"
             >
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 p-4">
                 {navLinks.map((link) => {
                   const active = pathname === link.href ||
                                 (link.href !== '/' && pathname.startsWith(link.href));
@@ -105,10 +105,10 @@ export function Navigation() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className={`px-4 py-3 rounded-lg font-semibold transition-colors ${
+                      className={`px-4 py-3 rounded-xl font-medium transition-colors ${
                         active
-                          ? 'bg-primary-500 text-white'
-                          : 'text-neutral-300 hover:bg-neutral-800 hover:text-white'
+                          ? 'bg-primary-500/10 text-primary-300 border border-primary-500/20'
+                          : 'text-contrast-100 hover:bg-contrast-800 hover:text-white'
                       }`}
                     >
                       {link.label}

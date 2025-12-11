@@ -50,7 +50,7 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       {/* Name */}
       <div>
-        <label htmlFor="name" className="block text-sm font-semibold text-neutral-300 mb-2">
+        <label htmlFor="name" className="block text-sm font-semibold text-primary-200 mb-2">
           Name *
         </label>
         <input
@@ -59,16 +59,14 @@ export function ContactForm() {
           required
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg
-                     text-white placeholder-neutral-500 focus:outline-none focus:ring-2
-                     focus:ring-primary-500 focus:border-transparent transition-all"
+          className="input"
           placeholder="Your name"
         />
       </div>
 
       {/* Email */}
       <div>
-        <label htmlFor="email" className="block text-sm font-semibold text-neutral-300 mb-2">
+        <label htmlFor="email" className="block text-sm font-semibold text-primary-200 mb-2">
           Email *
         </label>
         <input
@@ -77,25 +75,21 @@ export function ContactForm() {
           required
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg
-                     text-white placeholder-neutral-500 focus:outline-none focus:ring-2
-                     focus:ring-primary-500 focus:border-transparent transition-all"
+          className="input"
           placeholder="your.email@example.com"
         />
       </div>
 
       {/* Subject */}
       <div>
-        <label htmlFor="subject" className="block text-sm font-semibold text-neutral-300 mb-2">
+        <label htmlFor="subject" className="block text-sm font-semibold text-primary-200 mb-2">
           Subject
         </label>
         <select
           id="subject"
           value={formData.subject}
           onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-          className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg
-                     text-white focus:outline-none focus:ring-2 focus:ring-primary-500
-                     focus:border-transparent transition-all cursor-pointer"
+          className="input cursor-pointer"
         >
           <option>Job Opportunity</option>
           <option>Freelance Project</option>
@@ -107,7 +101,7 @@ export function ContactForm() {
 
       {/* Message */}
       <div>
-        <label htmlFor="message" className="block text-sm font-semibold text-neutral-300 mb-2">
+        <label htmlFor="message" className="block text-sm font-semibold text-primary-200 mb-2">
           Message *
         </label>
         <textarea
@@ -116,9 +110,7 @@ export function ContactForm() {
           rows={6}
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg
-                     text-white placeholder-neutral-500 focus:outline-none focus:ring-2
-                     focus:ring-primary-500 focus:border-transparent transition-all resize-none"
+          className="input resize-none"
           placeholder="Tell me about your project, opportunity, or just say hi!"
           maxLength={1000}
         />

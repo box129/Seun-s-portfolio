@@ -117,8 +117,8 @@ export function ExpandableTabs({
                 transition-colors duration-200 overflow-hidden
                 ${
                   active
-                    ? 'bg-primary-500 text-white'
-                    : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white'
+                    ? 'bg-primary-500 text-white shadow-sm'
+                    : 'bg-neutral-100 text-contrast-600 hover:bg-neutral-200 hover:text-contrast-900'
                 }
               `}
               whileHover={{ scale: 1.05 }}
@@ -190,12 +190,12 @@ export function NavTabs({
             className={`
               relative flex items-center gap-2 px-4 py-2 rounded-lg
               font-medium transition-colors duration-200
-              ${
-                active
-                  ? 'text-white'
-                  : 'text-neutral-400 hover:text-white hover:bg-neutral-800'
-              }
-            `}
+                ${
+                  active
+                    ? 'text-primary-600 bg-primary-50'
+                    : 'text-contrast-600 hover:text-contrast-900 hover:bg-neutral-100'
+                }
+              `}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
