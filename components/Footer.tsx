@@ -46,7 +46,7 @@ export function Footer() {
                 </Link>
               ))}
               <a
-                href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${personalInfo.resumeUrl}`}
+                href={personalInfo.resumeUrl}
                 download
                 className="text-neutral-400 hover:text-primary-400 transition-colors text-sm"
               >
