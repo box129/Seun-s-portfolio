@@ -1,8 +1,16 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+const repoName = 'Seun-s-portfolio'; // Your GitHub repository name
+const basePath = isProd ? `/${repoName}` : '';
+
 const nextConfig = {
-  output: 'export', // Required for GitHub Pages (static site generation)
+  output: 'export', // Required for GitHub Pages
+  basePath: basePath,
   images: {
-    unoptimized: true, // Required as Next.js Image Optimization API doesn't work with static export
+    unoptimized: true,
+  },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
 }
 

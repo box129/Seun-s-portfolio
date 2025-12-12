@@ -72,7 +72,7 @@ export default function AboutPage() {
                   {aboutData.hero.missionStatement}
                 </p>
                 <a
-                  href={aboutData.resumeUrl}
+                  href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${aboutData.resumeUrl}`}
                   download
                   className="btn-primary inline-flex"
                 >
